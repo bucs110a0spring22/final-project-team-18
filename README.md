@@ -11,7 +11,7 @@
 
 ### Team: ???
 #### Zain Mckay
-#### Paul Depola
+#### Connie Deng
 #### Jaycob White
 
 ***
