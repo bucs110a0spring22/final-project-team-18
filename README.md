@@ -9,7 +9,7 @@
 
 << [link to demo presentation slides](#) >>
 
-### Team: ???
+### Team: Rubik's Cube
 #### Zain Mckay
 #### Connie Deng
 #### Jaycob White
