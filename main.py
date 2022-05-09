@@ -1,7 +1,7 @@
 from src import Controller
 
 def main():
-    pygame.init()
+    #pygame.init()
     mainWindow = Controller.Controller()
     mainWindow.mainLoop()
     
