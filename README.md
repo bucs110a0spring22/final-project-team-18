@@ -1,6 +1,6 @@
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 # CS110 Project Proposal
-# << Project Title >>
+# Rubik's Cube
 ## CS 110 Final Project
 ### Spring Semester 2022
 ### [Assignment Description](https://docs.google.com/document/d/1H4R6yLL7som1lglyXWZ04RvTp_RvRFCCBn6sqv-82ps/edit#)
@@ -9,7 +9,7 @@
 
 << [link to demo presentation slides](#) >>
 
-### Team: Rubik's Cube
+### Team: Rubik's Cube Squad
 #### Zain Mckay
 #### Connie Deng
 #### Jaycob White
@@ -82,7 +82,10 @@ The Project is broken down into the following file structure:
 ## ATP
 
 | Step                  | Procedure     | Expected Results  | Actual Results |
-| ----------------------|:-------------:| -----------------:| -------------- |
-|  1  | Run Counter Program  | GUI window appears with count = 0  |          |
-|  2  | click count button  | display changes to count = 1 |                 |
-etc...
+| ----------------------|:-------------:|:-----------------:|:--------------:|
+|  1  | Click the run button | Screen appears with rubik's cube |            |
+|  2  | Click the play button | Rubik's cube gets shuffled |                 |
+|  3  | Click and drag row to the left | Row clicked and dragged shifts left |                  |  
+|  4  | Click and drag row to the right | Row clicked and dragged shifts right |                |    
+|  5  | Click and drag column up | Column clicked and dragged shifts upward |                   | 
+|  6  | Click and drag column down | Column clicked and dragged shifts downward |               | 
