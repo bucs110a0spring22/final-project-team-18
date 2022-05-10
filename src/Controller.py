@@ -14,8 +14,8 @@ class Controller:
         self.background = pygame.Surface(self.screen.get_size()).convert()
         self.background.fill((0, 0, 0)) #set screen to black, to show outline of cube
         self.font_name = '8 BIT-WONDER.TTF'
-        start_img = pygame.image.load('assets/start_button.png').convert.alpha
-
+        self.Cube = Cube()
+        self.state = "GAME"
         """
 	  description: initialize the controller, initalizes the start buttons
 	  args: self,width,height
@@ -27,52 +27,46 @@ class Controller:
       if (self.state == "GAME"):
         self.gameLoop()
       elif (self.state == "MENU"):
+        self.menu()
+      if event.type == pygame.MOUSEBUTTONDOWN:
+        if start_button.checkforinput(MENU):
+          self.state = "GAME"
+        
         
         """
 	  description: loop with all events, determines what loop it is in depending on what state it is in
 	  args: self
   	return: nothing
         """
-  def menu(self):
+  def menu(elf):
     pygame.display.set_caption("Menu")
     mouse.enabled(True)
-    while self.state == "MENU"
-      menu = pygame_menu.Menu("Welcome to Rubix Cube!")
-      start_button = button(screen,100,100,100,100,(hoverColour = 150,0,0),onClick = gameloop)
-      if state == "GAME"
+    while self.state == "MENU":
+      menu = pygame_menu.Menu("Welcome to Rubix Cube!",800,600,theme=pygame_menu.themes.THEME_BLUE)
+      if state == "GAME":
         pygame_menu.events.CLOSE
+      
       #has bare bones buttons and words
-        """
-	  description: gives the frontend code for the menu screen
-	  args: self
-  	return: nothing
-        """
 
   def gameloop(self):
-    while self.state == "GAME"
+    while self.state == "GAME":
       self.background.fill((255, 255, 255)) #meant to fill over the menu
       #event loop
       message = myfont.render('Press space to restart cube.', False, (0, 0, 0))
       self.screen.blit(message, (self.width / 2, self.height / 2))
       for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-          sys.exit()
-      for event in pygame.event.get():
         if event.type == pygame.K_SPACE:
-          gamerestart()
-        """
-	  description: gives the frontend for the gameloop, and controls (not added yet)
+        gamerestart()
+        elif event.type == pygame.QUIT:
+          sys.exit()
+
+
+          """
+	  description: restarts cube 
 	  args: self
   	return: nothing
-        """
+        """  
   def gamerestart(self): 
-    while self.state = "GAME"
-      set ""
-      for event in pygame.event.get():
-          if event.type == pygame.QUIT:
-              sys.exit()
-        """
-	  description: restarts cube so player can start with a cube that isn't shuffled
-	  args: self
-  	return: nothing
-        """
+    
+
+ 

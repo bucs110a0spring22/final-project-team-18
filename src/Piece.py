@@ -14,7 +14,7 @@ class Piece:
     self.size = 3
 
 #sets up 6 faces of the cube 
-    #goal is to replace "piece" with acutal cube piece objects if possible 
+   
   def topFace(self, column):
     
     topRow = []

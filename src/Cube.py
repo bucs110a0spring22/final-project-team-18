@@ -1,5 +1,6 @@
 import pygame
 from Piece import Piece
+import random 
 
 class Cube:
   def __init__(self, row, column, pc, img_file):
@@ -10,7 +11,8 @@ class Cube:
     self.column = column
     self.size = 3
     self.pc = Piece.Piece()
-  #rotate= rotate whole cube  
+
+  #rotates whole cube  
   def rotateUp(self, angle):
     self.rect = pygame.transform.rotate(self.rect, 90)
   def rotateDown(self, angle):
@@ -21,6 +23,8 @@ class Cube:
     self.rect = pygame.transform.rotate(self.rect, 0)
 
   #move = move individual row/column
+    
+  #moves individual rows/columns
   def moveUp(self, column, numMoves):
     moves = 0
     while moves < numMoves:
@@ -276,7 +280,7 @@ class Cube:
         for i in range(self.size):#right to top
           self.pc.botFace[i]=holder[b]
           b+=self.size
-  def moveRght(self, row, numMoves):
+  def moveRight(self, row, numMoves):
     moves = 0
     while moves < numMoves:
       if row < 0: return "Error: row not in range"
@@ -353,21 +357,16 @@ class Cube:
         for i in range(self.size):#left to top
           self.pc.botFace[i]=holder[b]
           b+=self.size
+      
+  #shuffles cube
+  def shuffle(self):
+    for i in range(3):
+      self.moveUp(i, random())
+      self.moveDown(i, random())
+      self.moveLeft(i, random())
+      self.moveRight(i, random())
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      
+  
+      
