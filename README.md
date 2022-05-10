@@ -89,3 +89,5 @@ The Project is broken down into the following file structure:
 |  4  | Click and drag row to the right | Row clicked and dragged shifts right |                |    
 |  5  | Click and drag column up | Column clicked and dragged shifts upward |                   | 
 |  6  | Click and drag column down | Column clicked and dragged shifts downward |               | 
+
+NOTE: MILESTONE 4 IS UNDER CONTROLLER COMMIT
