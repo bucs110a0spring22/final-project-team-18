@@ -1,17 +1,94 @@
 import pygame
-from Piece import Piece
+from src import Piece
 import random 
 
 class Cube:
-  def __init__(self, row, column, pc, img_file):
-    pygame.sprite.Sprite.__init__(self)
-    self.image = pygame.image.load(img_file).convert_alpha()
-    self.rect = self.image.get_rect()
+  def __init__(self, row, column):
     self.row = row
     self.column = column
-    self.size = 3
-    self.pc = Piece.Piece()
+      
+    self.display_face = pygame.sprite.Group()
+    self.pieces = pygame.sprite.Group()
+    
+  def topFace(self,row,column):
+    current_row = 0
+    current_column = 0
+    for i in range(row*column):
+      p = Piece.Piece(current_row, current_column, "white")
+      self.pieces.add(p)
+      current_row = (current_row + 10)
+      if current_row == (self.column*10):
+        current_column = current_column + 10
+        current_row = 0
+        
+  def bottomFace(self,row,column):
+    current_row = 0
+    current_column = 0
+    for i in range(row*column):
+      p = Piece.Piece(current_row, current_column, "yellow")
+      self.pieces.add(p)
+      current_row = (current_row + 10)
+      if current_row == (self.column*10):
+        current_column = current_column + 10
+        current_row = 0
 
+  def frontFace(self,row,column):
+    current_row = 0
+    current_column = 0
+    for i in range(row*column):
+      p = Piece.Piece(current_row, current_column, "red")
+      self.pieces.add(p)
+      current_row = (current_row + 10)
+      if current_row == (self.column*10):
+        current_column = current_column + 10
+        current_row = 0
+
+  def backFace(self,row,column):
+    current_row = 0
+    current_column = 0
+    for i in range(row*column):
+      p = Piece.Piece(current_row, current_column, "orange")
+      self.pieces.add(p)
+      current_row = (current_row + 10)
+      if current_row == (self.column*10):
+        current_column = current_column + 10
+        current_row = 0
+  
+  def leftFace(self,row,column):
+    current_row = 0
+    current_column = 0
+    for i in range(row*column):
+      p = Piece.Piece(current_row, current_column, "green")
+      self.pieces.add(p)
+      current_row = (current_row + 10)
+      if current_row == (self.column*10):
+        current_column = current_column + 10
+        current_row = 0
+
+  #first line original wrote: self.rightFace(self,row,column):
+  def rightFace(self,row,column):
+    current_row = 0
+    current_column = 0
+    for i in range(row*column):
+      p = Piece.Piece(current_row, current_column, "blue")
+      self.pieces.add(p)
+      current_row = (current_row + 10)
+      if current_row == (self.column*10):
+        current_column = current_column + 10
+        current_row = 0
+        
+    sides = ["white", "yellow", "red", "orange", "green", "blue"]
+    for color in sides:
+        current_row = 0
+        current_column = 0
+        for i in range(row*column):
+           p = Piece.Piece(current_row, current_column, color)
+           self.pieces.add(p)
+           current_row = (current_row + 10)
+           if current_row == (self.column*10):
+               current_column = current_column + 10
+               current_row = 0
+        
   #rotates whole cube  
   def rotateUp(self, angle):
     self.rect = pygame.transform.rotate(self.rect, 90)

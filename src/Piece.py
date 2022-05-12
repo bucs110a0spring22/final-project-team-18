@@ -1,16 +1,17 @@
 import pygame
 
-class Piece:
-  def __init__(self, size, img_file, tFace, fFace, botFace, lFace, rFace, bacFace):
-    pygame.sprite.Sprite.__init__(self)
-    self.image = pygame.image.load(img_file).convert_alpha()
+class Piece(pygame.sprite.Sprite):
+  def __init__(self, x, y, color):
+    super().__init__()
+    #issue is that strings are immutable 
+    # self.image = pygame.image.load("assets/f'{color}Sq.png").convert_alpha()
+    self.image = pygame.image.load("assets/" + color + "Sq.png")
+    self.image2 = pygame.image.load("assets/{1}Sq.png").convert_alpha()
     self.rect = self.image.get_rect()
-    self.tFace = tFace
-    self.fFace = fFace
-    self.botFace = botFace
-    self.lFace = tFace
-    self.rFace = rFace
-    self.bacFace = bacFace
+    self.rect.x = x
+    self.rect.y = y
+    self.correct_face = color
+    self.current_face = color
     self.size = 3
 
 #sets up 6 faces of the cube 
