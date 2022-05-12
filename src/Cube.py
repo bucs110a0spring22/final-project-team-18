@@ -2,85 +2,15 @@ import pygame
 from src import Piece
 import random 
 
-class Cube:
+class Cube(pygame.sprite.Sprite):
   def __init__(self, row, column):
     self.row = row
     self.column = column
-      
-    self.display_face = pygame.sprite.Group()
+    current_row = 0
+    current_column = 0
     self.pieces = pygame.sprite.Group()
-    
-  def topFace(self,row,column):
-    current_row = 0
-    current_column = 0
-    for i in range(row*column):
-      p = Piece.Piece(current_row, current_column, "white")
-      self.pieces.add(p)
-      current_row = (current_row + 10)
-      if current_row == (self.column*10):
-        current_column = current_column + 10
-        current_row = 0
-        
-  def bottomFace(self,row,column):
-    current_row = 0
-    current_column = 0
-    for i in range(row*column):
-      p = Piece.Piece(current_row, current_column, "yellow")
-      self.pieces.add(p)
-      current_row = (current_row + 10)
-      if current_row == (self.column*10):
-        current_column = current_column + 10
-        current_row = 0
-
-  def frontFace(self,row,column):
-    current_row = 0
-    current_column = 0
-    for i in range(row*column):
-      p = Piece.Piece(current_row, current_column, "red")
-      self.pieces.add(p)
-      current_row = (current_row + 10)
-      if current_row == (self.column*10):
-        current_column = current_column + 10
-        current_row = 0
-
-  def backFace(self,row,column):
-    current_row = 0
-    current_column = 0
-    for i in range(row*column):
-      p = Piece.Piece(current_row, current_column, "orange")
-      self.pieces.add(p)
-      current_row = (current_row + 10)
-      if current_row == (self.column*10):
-        current_column = current_column + 10
-        current_row = 0
-  
-  def leftFace(self,row,column):
-    current_row = 0
-    current_column = 0
-    for i in range(row*column):
-      p = Piece.Piece(current_row, current_column, "green")
-      self.pieces.add(p)
-      current_row = (current_row + 10)
-      if current_row == (self.column*10):
-        current_column = current_column + 10
-        current_row = 0
-
-  #first line original wrote: self.rightFace(self,row,column):
-  def rightFace(self,row,column):
-    current_row = 0
-    current_column = 0
-    for i in range(row*column):
-      p = Piece.Piece(current_row, current_column, "blue")
-      self.pieces.add(p)
-      current_row = (current_row + 10)
-      if current_row == (self.column*10):
-        current_column = current_column + 10
-        current_row = 0
-        
     sides = ["white", "yellow", "red", "orange", "green", "blue"]
     for color in sides:
-        current_row = 0
-        current_column = 0
         for i in range(row*column):
            p = Piece.Piece(current_row, current_column, color)
            self.pieces.add(p)
@@ -88,19 +18,133 @@ class Cube:
            if current_row == (self.column*10):
                current_column = current_column + 10
                current_row = 0
+             
+    self.topFace = pygame.sprite.Group()
+    for i in range(row*column):
+      p = Piece.Piece(current_row, current_column, 'assets/whiteSq.png')
+      self.topFace.add(p)
+      current_row = (current_row + 10)
+      if current_row == (self.column*10):
+        current_column = current_column + 10
+        current_row = 0
         
-  #rotates whole cube  
-  def rotateUp(self, angle):
-    self.rect = pygame.transform.rotate(self.rect, 90)
-  def rotateDown(self, angle):
-    self.rect = pygame.transform.rotate(self.rect, 270)
-  def rotateLeft(self, angle):
-    self.rect = pygame.transform.rotate(self.rect, 180)
-  def rotateRght(self, angle):
-    self.rect = pygame.transform.rotate(self.rect, 0)
+    self.bottomFace = pygame.sprite.Group()
+    for i in range(row*column):
+      p = Piece.Piece(current_row, current_column, 'assets/yellowSq.png')
+      self.bottomFace.add(p)
+      current_row = (current_row + 10)
+      if current_row == (self.column*10):
+        current_column = current_column + 10
+        current_row = 0
+        
+    self.displayFace = pygame.sprite.Group()
+    for i in range(row*column):
+      p = Piece.Piece(current_row, current_column, 'assets/redSq.png')
+      self.displayFace.add(p)
+      current_row = (current_row + 10)
+      if current_row == (self.column*10):
+        current_column = current_column + 10
+        current_row = 0
+        
+    self.backFace = pygame.sprite.Group()
+    for i in range(row*column):
+      p = Piece.Piece(current_row, current_column, 'assets/orangeSq.png')
+      self.backFace.add(p)
+      current_row = (current_row + 10)
+      if current_row == (self.column*10):
+        current_column = current_column + 10
+        current_row = 0
+        
+    self.leftFace = pygame.sprite.Group()
+    for i in range(row*column):
+      p = Piece.Piece(current_row, current_column, 'assets/greenSq.png')
+      self.leftFace.add(p)
+      current_row = (current_row + 10)
+      if current_row == (self.column*10):
+        current_column = current_column + 10
+        current_row = 0
+        
+    self.rightFace = pygame.sprite.Group()
+    for i in range(row*column):
+      p = Piece.Piece(current_row, current_column, 'assets/blueSq.png')
+      self.rightFace.add(p)
+      current_row = (current_row + 10)
+      if current_row == (self.column*10):
+        current_column = current_column + 10
+        current_row = 0
 
-  #move = move individual row/column
-    
+#do these methods not work? 
+#anything that I comment out, idk if it will work or not, just trying to get rid of stuff to see 'something'
+        #slay got it
+        
+  #def topFace(self,row,column):
+    #current_row = 0
+    #current_column = 0
+    #for i in range(row*column):
+      #p = Piece.Piece(current_row, current_column, "white")
+      #self.pieces.add(p)
+      #current_row = (current_row + 10)
+      #if current_row == (self.column*10):
+        #current_column = current_column + 10
+        #current_row = 0
+        
+  #def bottomFace(self,row,column):
+    #current_row = 0
+    #current_column = 0
+    #for i in range(row*column):
+      #p = Piece.Piece(current_row, current_column, 'assets/yellowSq.png')
+      #self.pieces.add(p)
+      #current_row = (current_row + 10)
+      #if current_row == (self.column*10):
+        #current_column = current_column + 10
+        #current_row = 0
+
+  #def frontFace(self,row,column):
+    #current_row = 0
+    #current_column = 0
+    #for i in range(row*column):
+      #p = Piece.Piece(current_row, current_column, 'assets/redSq.png')
+      #self.pieces.add(p)
+      #current_row = (current_row + 10)
+      #if current_row == (self.column*10):
+        #current_column = current_column + 10
+        #current_row = 0
+
+  #def backFace(self,row,column):
+    #current_row = 0
+    #current_column = 0
+    #for i in range(row*column):
+      #p = Piece.Piece(current_row, current_column, 'assets/orangeSq.png')
+      #self.pieces.add(p)
+      #current_row = (current_row + 10)
+      #if current_row == (self.column*10):
+        #current_column = current_column + 10
+        #current_row = 0
+  
+  #def leftFace(self,row,column):
+    #current_row = 0
+    #current_column = 0
+    #for i in range(row*column):
+      #p = Piece.Piece(current_row, current_column, 'assets/greenSq.png')
+      #self.pieces.add(p)
+      #current_row = (current_row + 10)
+      #if current_row == (self.column*10):
+        #current_column = current_column + 10
+        #current_row = 0
+
+  #first line original wrote: self.rightFace(self,row,column):
+  #def rightFace(self,row,column):
+    #current_row = 0
+    #current_column = 0
+    #for i in range(row*column):
+      #p = Piece.Piece(current_row, current_column, 'assets/blueSq.png')
+      #self.pieces.add(p)
+      #current_row = (current_row + 10)
+      #if current_row == (self.column*10):
+        #current_column = current_column + 10
+        #current_row = 0
+      
+  #move = move individual row/column 
   #moves individual rows/columns
   def moveUp(self, column, numMoves):
     moves = 0
@@ -442,8 +486,3 @@ class Cube:
       self.moveDown(i, random())
       self.moveLeft(i, random())
       self.moveRight(i, random())
-
-
-      
-  
-      
