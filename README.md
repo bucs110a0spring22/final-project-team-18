@@ -24,19 +24,25 @@
 
 ## User Interface Design *(Front End Specialist)*
 
-* << A wireframe or drawing of the user interface concept along with a short description of the interface. You should have one for each screen in your program. >>
-    * For example, if your program has a start screen, game screen, and game over screen, you should include a wireframe / screenshot / drawing of each one and a short description of the components
+* (https://ibb.co/y8NcFL5) Image to wireframe
+    
 * << You should also have a screenshot of each screen for your final GUI >>
 
 ***        
 
 ## Program Design *(Backend Specialist)*
 
-* Non-Standard libraries
-    * << You should have a list of any additional libraries or modules used (pygame, request) beyond non-standard python. >>
-    * For each additional module you should include
-        * url for the module documentation
-        * a short description of the module
+* Library: pygame
+* Pygame:
+    * https://www.pygame.org/docs/
+    * Pygame is a library that contains many python modules, and is designed to write video games. 
+* Modules: random, sys
+    * Random Module:
+        * https://docs.python.org/3/library/random.html
+        * In our program, we used the random module in order to 'shuffle' the cube. This is done by setting a random amount of moves, either left, right, up, or down, a certain number of times.
+    * Sys Module:
+        * https://docs.python.org/3/library/sys.html
+        * In our program we only use the sys module to exit the program. It has many more functions, but this is one of them.
 * Class Interface Design
     * << A simple drawing that shows the class relationships in your code (see below for an example). >>
         * ! [class diagram](assets/class_diagram.jpg)
@@ -75,7 +81,7 @@ The Project is broken down into the following file structure:
 
 ### Front End Specialist - Connie Deng
 
-<< Front-end lead conducted significant research on... >>
+<< Created front end code, ensured sprites appeared and oriented where they appeared. Also fixed some errors/bugs that we ran into, and cleaned up some code.>>
 
 ### Back End Specialist - Jaycob White
 
