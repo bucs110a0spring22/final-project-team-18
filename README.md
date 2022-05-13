@@ -18,7 +18,7 @@
 
 ## Project Description *(Software Lead)*
 
-<< Give an overview of your project >>
+<< Our project is a virtual Rubik's cube. We display one face that can be interacted with by using the arrow keys to change colors and numbers 1-3 to select between rows/columns.  >>
 
 ***    
 
@@ -50,9 +50,16 @@ The Project is broken down into the following file structure:
 
 * main.py
 * src
-    * <all of your python files should go here>
+    * <Controller.py
+    * Cube.py
+    * Piece.py>
 * assets
-    * <all of your media, i.e. images, font files, etc, should go here)
+    * <blueSq.png
+    * greenSq.png
+      orangeSq.png
+    * redSq.png
+    * whiteSq.png
+    * yellowSq.png)
 * etc
     * <This is a catch all folder for things that are not part of your project, but you want to keep with your project. Your demo video should go here.>
 
@@ -64,7 +71,7 @@ The Project is broken down into the following file structure:
 
 ### Software Lead - Zain Mckay
 
-<< Worked as integration specialist by... >>
+<< Ensuring the front-end and back-end code worked together properly and assisted wherever I could in writing the code alongside my other teammates.  >>
 
 ### Front End Specialist - Connie Deng
 
@@ -76,18 +83,18 @@ The Project is broken down into the following file structure:
 
 ## Testing *(Software Lead)*
 
-* << Describe your testing strategy for your project. >>
-    * << Example >>
+* << Testing strategy mainly included print statements to see how far a loop would run before an issue occured and changing numbers to see how the image was affected.  >>
+    * << Print("This works") >>
 
 ## ATP
 
 | Step                  | Procedure     | Expected Results  | Actual Results |
 | ----------------------|:-------------:|:-----------------:|:--------------:|
 |  1  | Click the run button | Screen appears with rubik's cube |            |
-|  2  | Click the play button | Rubik's cube gets shuffled |                 |
-|  3  | Click and drag row to the left | Row clicked and dragged shifts left |                  |  
-|  4  | Click and drag row to the right | Row clicked and dragged shifts right |                |    
-|  5  | Click and drag column up | Column clicked and dragged shifts upward |                   | 
-|  6  | Click and drag column down | Column clicked and dragged shifts downward |               | 
+|  2  | Click 1 | column 1 is selected |                 |
+|  3  | Click 2 | Column 2 is selected |                  |  
+|  4  | Click 3 | Column 0 is selected |                |    
+|  5  | Click up arrow | Column is shifted up one face |                   | 
+|  6  | Click down arrow | Column is shifted down one face |               | 
 
 NOTE: MILESTONE 4 IS UNDER CONTROLLER COMMIT

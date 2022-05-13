@@ -1,22 +1,19 @@
 import pygame
 
 class Piece(pygame.sprite.Sprite):
-  def __init__(self, x, y, color):
+  def __init__(self, pos, face, color):
     super().__init__()
-    pygame.sprite.Sprite.__init__(self)
-    # self.image = pygame.image.load("assets/f'{color}Sq.png").convert_alpha()  (original)
-    #self.image = pygame.image.load("assets/" + color + "Sq.png").convert_alpha()
-    self.sprites = []
-    #self.sprites.append(pygame.image.load("assets/" + color + "Sq.png").convert_alpha())
-    self.image = pygame.image.load(color).convert_alpha()
+    self.image = pygame.image.load("assets/" + color + "Sq.png").convert_alpha()
     #self.current_sprite = 0 
     #self.image = self.sprites[self.current_sprite]
     self.rect = self.image.get_rect()
-    self.rect.x = x
-    self.rect.y = y
+    #self.rect.center = [x,y]
+    self.rect.topleft = pos
     self.correct_face = color
-    self.current_face = color
-    self.size = 3
+    self.current_face = face
+
+
+#be right back
 
 #sets up 6 faces of the cube 
  # def topFace(self):
