@@ -5,9 +5,10 @@
 ### Spring Semester 2022
 ### [Assignment Description](https://docs.google.com/document/d/1H4R6yLL7som1lglyXWZ04RvTp_RvRFCCBn6sqv-82ps/edit#)
 
-<< [repl](#) >>
+<< [[repl](https://replit.com/join/pwbhjuenhh-jaycob-aa)](#) >>
 
-<< [link to demo presentation slides](#) >>
+Link to Presentation Slides:(https://docs.google.com/presentation/d/12NakJV7317ZIsl4kpUUb4EA0p290iWoaFN8JRyrUQBA/edit?usp=sharing)]
+Video: https://drive.google.com/file/d/1O1jezLfJ69F4xQOjFk2XtCz8XZ1NKyB1/view?usp=sharing 
 
 ### Team: Rubik's Cube Squad
 #### Zain Mckay
@@ -24,9 +25,9 @@ Our project is a virtual Rubik's cube. We display one face that can be interacte
 
 ## User Interface Design *(Front End Specialist)*
 
-* (https://ibb.co/y8NcFL5) Image to wireframe
-    
-* << You should also have a screenshot of each screen for your final GUI >>
+* ![Initial GUI](assets/mainPg.png)
+* 
+* ![Final GUI](assets/GUI.png)
 
 ***        
 
@@ -41,11 +42,11 @@ Our project is a virtual Rubik's cube. We display one face that can be interacte
         * https://docs.python.org/3/library/random.html
         * In our program, we used the random module in order to 'shuffle' the cube. This is done by setting a random amount of moves, either left, right, up, or down, a certain number of times.
 * Class Interface Design
-    * << A simple drawing that shows the class relationships in your code (see below for an example). >>
-        * ! [class diagram](assets/class_diagram.jpg)
-    * This does not need to be overly detailed, but should show how your code fits into the Model/View/Controller paradigm.
+    * ![classDiagram](assets/classDiagram.png)
 * Classes
-    * << You should have a list of each of your classes with a description. >>
+    * Piece Class: creates a single piece that takes instance variables position, face, and color.
+    * Cube Class: creates all faces of cube, top, bottom, front, back, left, and right. Also creates each face with 9 pieces from the piece class. Therefore the width and height is 3 when creating the standard rubik's cube.
+    * Controller Class: executes and displays the results from the front end and back end code. Relies on both the piece class and the cube class. 
 
 ## Project Structure *(Software Lead)*
 
@@ -61,13 +62,15 @@ The Project is broken down into the following file structure:
     * blueSq.png
     * classDiagram.png
     * greenSq.png
+    * GUI.png
+    * mainPg.png
     * orangeSq.png
     * presswforcontrols.png
     * redSq.png
     * whiteSq.png
     * yellowSq.png>
 * etc
-    * <This is a catch all folder for things that are not part of your project, but you want to keep with your project. Your demo video should go here.>
+    * https://drive.google.com/file/d/1O1jezLfJ69F4xQOjFk2XtCz8XZ1NKyB1/view?usp=sharing  
 
 ***
 
