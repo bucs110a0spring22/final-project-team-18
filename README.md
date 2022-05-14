@@ -18,7 +18,7 @@
 
 ## Project Description *(Software Lead)*
 
-<< Our project is a virtual Rubik's cube. We display one face that can be interacted with by using the arrow keys to change colors and numbers 1-3 to select between rows/columns.  >>
+Our project is a virtual Rubik's cube. We display one face that can be interacted with by using the arrow keys to change colors and numbers 1-3 to select between rows/columns. 
 
 ***    
 
@@ -40,9 +40,6 @@
     * Random Module:
         * https://docs.python.org/3/library/random.html
         * In our program, we used the random module in order to 'shuffle' the cube. This is done by setting a random amount of moves, either left, right, up, or down, a certain number of times.
-    * Sys Module:
-        * https://docs.python.org/3/library/sys.html
-        * In our program we only use the sys module to exit the program. It has many more functions, but this is one of them.
 * Class Interface Design
     * << A simple drawing that shows the class relationships in your code (see below for an example). >>
         * ! [class diagram](assets/class_diagram.jpg)
@@ -60,12 +57,15 @@ The Project is broken down into the following file structure:
     * Cube.py
     * Piece.py>
 * assets
-    * <blueSq.png
+    * <background.png
+    * blueSq.png
+    * classDiagram.png
     * greenSq.png
-      orangeSq.png
+    * orangeSq.png
+    * presswforcontrols.png
     * redSq.png
     * whiteSq.png
-    * yellowSq.png)
+    * yellowSq.png>
 * etc
     * <This is a catch all folder for things that are not part of your project, but you want to keep with your project. Your demo video should go here.>
 
@@ -77,20 +77,20 @@ The Project is broken down into the following file structure:
 
 ### Software Lead - Zain Mckay
 
-<< Ensuring the front-end and back-end code worked together properly and assisted wherever I could in writing the code alongside my other teammates.  >>
+Ensuring the front-end and back-end code worked together properly and assisted wherever I could in writing the code alongside my other teammates. 
 
 ### Front End Specialist - Connie Deng
 
-<< Created front end code, ensured sprites appeared and oriented where they appeared. Also fixed some errors/bugs that we ran into, and cleaned up some code.>>
+Created front end code, ensured sprites appeared and oriented where they appeared, and made sure the controller class worked with the cube class. Also fixed some errors/bugs that we ran into, and cleaned up some code.
 
 ### Back End Specialist - Jaycob White
 
-<< The back end specialist... >>
+Created back end code, made sure that the cube class worked along with the piece class. Also, created movement of the rubik's cube.  
 
 ## Testing *(Software Lead)*
 
-* << Testing strategy mainly included print statements to see how far a loop would run before an issue occured and changing numbers to see how the image was affected.  >>
-    * << Print("This works") >>
+* Testing strategy mainly included print statements to see how far a loop would run before an issue occured and changing numbers to see how the image was affected.
+    * Print("This works") 
 
 ## ATP
 
@@ -102,5 +102,3 @@ The Project is broken down into the following file structure:
 |  4  | Click 3 | Column 0 is selected |                |    
 |  5  | Click up arrow | Column is shifted up one face |                   | 
 |  6  | Click down arrow | Column is shifted down one face |               | 
-
-NOTE: MILESTONE 4 IS UNDER CONTROLLER COMMIT

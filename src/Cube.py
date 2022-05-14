@@ -42,7 +42,9 @@ class Cube(pygame.sprite.Sprite):
    
     def moveUp(self, column):
         """
-          docstring
+        description: shifts cube upward
+        args: self, column
+        return: nothing
         """
         top = self.sides["top"]
         back = self.sides["back"]
@@ -56,7 +58,9 @@ class Cube(pygame.sprite.Sprite):
          
     def moveDown(self, column):
         """
-          docstring
+        description: shifts cube downward
+        args: self, column
+        return: nothing
         """
         top = self.sides["top"]
         back = self.sides["back"]
@@ -70,7 +74,9 @@ class Cube(pygame.sprite.Sprite):
         
     def moveLeft(self, row):
         """
-          docstring
+        description: shifts cube left
+        args: self, row
+        return: nothing
         """
         front = self.sides["front"]
         left = self.sides["left"]
@@ -84,7 +90,9 @@ class Cube(pygame.sprite.Sprite):
 
     def moveRight(self, row):
         """
-          docstring
+        description: shifts cube right
+        args: self, row
+        return: nothing
         """
         front = self.sides["front"]
         left = self.sides["left"]
